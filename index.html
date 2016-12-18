@@ -1,0 +1,194 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Polycalculator</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <img src="images/logo.png" alt="logo" width="150px;">
+            <br> Polycalculator
+        </header>
+
+        <div class="header-input">
+            <div class="input-group input-group-lg input-poly">
+                <span class="input-group-addon" id="sizing-addon1">P(x) = </span>
+                <input type="text" class="form-control" id="input1" placeholder="Unesite polinom...npr. x^2+2x+1" aria-describedby="sizing-addon1"
+                    autocomplete="off">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" id="start"><span class = "glyphicon glyphicon-ok"></span></button>
+                    <button class="btn btn-default" id="reset"><span class = "glyphicon glyphicon-remove"></span></button>
+                </span>
+            </div>
+        </div>
+
+        <div class="wrapper-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default panel-1">
+                        <div class="panel-heading panel-heading-custom">
+                            Polinom
+                            <div class="panel-heading-button-div">
+                                <button class="button help_button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Polinom koji ste uneli"><span class="glyphicon glyphicon-info-sign"></span></button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="output" id="output1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-2">
+                        <div class="panel-heading panel-heading-custom">
+                            Stepen
+                            <div class="panel-heading-button-div">
+                                <button class="button help_button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Stepen polinoma"><span class="glyphicon glyphicon-info-sign"></span></button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="output" id="output2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-3">
+                        <div class="panel-heading panel-heading-custom">
+                            Vodeći koeficijent
+                            <div class="panel-heading-button-div">
+                                <button class="button help_button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Koeficijent uz član najvećeg stepena"><span class="glyphicon glyphicon-info-sign"></span></button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="output" id="output3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-4">
+                        <div class="panel-heading panel-heading-custom">
+                            Izvod
+                            <div class="panel-heading-button-div">
+                                <button class="button help_button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Izvod polinoma po promenljivoj x"><span class="glyphicon glyphicon-info-sign"></span></button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="output" id="output4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-5">
+                        <div class="panel-heading panel-heading-custom">
+                            Integral
+                            <div class="panel-heading-button-div">
+                                <button class="button help_button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Integral polinoma po promenljivoj x"><span class="glyphicon glyphicon-info-sign"></span></button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="output" id="output5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-6">
+                        <div class="panel-heading panel-heading-custom">
+                            Nule u skupu Z
+                            <div class="panel-heading-button-div">
+                                <button class="button help_button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Nule polinoma u skupu Z"><span class="glyphicon glyphicon-info-sign"></span></button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="output" id="output6"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-7">
+                        <div class="panel-heading panel-heading-custom">
+                            Faktorizacija u skupu Z
+                            <div class="panel-heading-button-div">
+                                <button class="button help_button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Faktorizacija u skupu Z"><span class="glyphicon glyphicon-info-sign"></span></button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="output" id="output7"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="panel panel-default panel-8">
+                        <div class="panel-heading panel-heading-custom">
+                            Grafik
+                            <div class="panel-heading-button-div">
+                                <button class="button help_button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Grafik funkcije P(x)=0"><span class="glyphicon glyphicon-info-sign"></span></button>
+                            </div>
+                        </div>
+                        <div class="panel-body" id="canvas_wrapper">
+                            <canvas id="myCanvas">
+                                Vaš pretraživač ne podržava canvas element potreban za iscrtavanje grafika.
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4 footer-panel">
+                    <img src="images/logo.png" alt="logo" width="80px;">
+                    <span style="font-size: 24px;">Polycalculator</span>
+                    <br>
+                    <a href="http://www.matf.bg.ac.rs" class="footer-link">Matematički fakultet Beograd</a>
+                </div>
+                <div class="col-md-4 footer-panel" style="border-left: 1px solid #495E67">
+                    <br> Nemanja Jurić
+                    <br> Marija Vujičić
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-12 copyright">
+                    Matematički fakultet Beograd &copy; 2016
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+
+    <script src="js/polycalculator.js"></script>
+    <script src="js/fraction.min.js"></script>
+    <script src="js/complex.min.js"></script>
+    <script src="js/polynomial.min.js"></script>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>

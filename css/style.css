@@ -1,0 +1,170 @@
+body {
+    background-color: #eeeeee;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.wrapper-content{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    min-width: 300px;
+    padding: 10px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+button:focus{
+    outline: none;
+}
+
+.row{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: #25373A;
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+.header-input{
+    background-color: #25373A;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    padding: 15px;
+    z-index: 10;
+}
+
+.input-poly{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    min-width: 200px;
+}
+
+footer{
+    background-color: #25373A;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.footer-panel{
+   text-align: left;
+   height: 150px;
+}
+
+.copyright{
+    font-size: 16px;
+    padding: 10px;
+}
+
+.footer-link{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-link:hover{
+    color: #dddddd !important;
+    text-decoration: none;
+}
+
+.footer-link:active{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-link:visited{
+    color: white;
+    text-decoration: none;
+}
+
+#sizing-addon1{
+    background-color: #495E67;
+    color: white;
+    border: none;
+}
+
+#start{
+    background-color: #00A388;
+    color: white;
+    border: none;
+}
+
+#start:hover{
+    background-color: #018f77;
+}
+
+#reset{
+    background-color: #FF3838;
+    color: white;
+    border: none;
+}
+
+#reset:hover{
+    background-color: #e43333;
+}
+
+.panel-default > .panel-heading-custom {
+    font-size: 20px;
+    text-align: center;
+    background-color: #495E67;
+    color: white;
+    height: 50px;
+}
+
+.panel-heading-button-div{
+    text-align: right;
+    position: relative;
+    top: -30px;
+}
+
+.help_button{
+    background: none;
+    font-size: 20px;
+    border: none;
+    color: white;
+}
+
+.help_button:hover{
+    color: #dddddd;
+}
+
+.output{
+    text-align: center;
+    font-size: 24px;
+    line-height: 2em;
+}
+
+.popover{
+    color: black;
+}
+
+.keyboard{
+    position: fixed;
+    bottom: 0;
+    left: calc(50vw - 175px);
+    width: 350px;
+    height: 190px;
+    z-index: 20;
+    background-color: #495E67;
+    color: white;
+    font-size: 24px;
+    border: 2px solid #eeeeee;
+    padding: 10px;
+    margin: 0;
+}
